@@ -1,0 +1,33 @@
+apiVersion: backstage.io/v1alpha1
+kind: Component
+metadata:
+  name: adrspike
+  title: adrspike
+  description: Muziris, powered by the open source Backstage platform, is the centralised software catalogue, api & events hub and IaC resource builder to enable M&S product teams to ship high-quality code quickly — without compromising autonomy
+
+  # Example for optional annotations
+  annotations:
+    github.com/project-slug: DigitalInnovation/Muziris
+    backstage.io/techdocs-ref: url:https://github.com/DigitalInnovation/Muziris
+    pagerduty.com/integration-key: 86c8d0d64f344c05d0cb84de9cb03e2b
+    backstage.io/adr-location: url: https://github.com/MadhumithaMarane/adrspike/tree/main/docs/adrs
+  tags:
+    - backstage
+    - developer-experience
+    - service-catalogue
+  links:
+    - url: https://github.com/DigitalInnovation/Muziris
+      title: GitHub Repo
+      icon: github
+    - url: https://muziris.azurewebsites.net/
+      title: Portal Link
+      icon: website
+    - url: https://github.com/backstage/backstage
+      title: Upstream Repo
+      icon: github
+spec:
+  type: website
+  owner: Integration-Frameworks
+  dependsOn: [component:Azure-Webapp, component:Azure-KeyVault]
+  system: Integration-Scaffolding
+  lifecycle: production
